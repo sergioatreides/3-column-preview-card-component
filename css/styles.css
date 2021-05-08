@@ -1,0 +1,112 @@
+:root {
+    --naranja: hsl(31, 77%, 52%);
+    --cian-oscuro: hsl(184, 100%, 22%);
+    --cian-muy-oscuro: hsl(179, 100%, 13%);
+    --blanco: hsla(0, 0%, 100%, 0.75);
+    --gris-claro: hsl(0, 0%, 95%);
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+body {
+    background-color: var(--gris-claro);
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+}
+main {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    width: 55vw;
+}
+h2 {
+    color: var(--gris-claro);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+p {
+    color: var(--blanco);
+    font-size: .8em;
+    line-height: 1.8em;
+}
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.iconos {
+    width: 30%;
+}
+#sedans {
+    background-color: var(--naranja);
+    border-radius: 7px 0px 0px 7px;
+}
+.boton-sedans {
+    color: var(--naranja);
+}
+#suvs {
+    background-color: var(--cian-oscuro);
+}
+.boton-suvs {
+    color: var(--cian-oscuro);
+}
+#luxury {
+    background-color: var(--cian-muy-oscuro);
+    border-radius: 0px 7px 7px 0px;
+}
+.boton-luxury {
+    color: var(--cian-muy-oscuro);
+}
+.boton {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+    background-color: var(--gris-claro);
+    border: 0;
+    width: 75%;
+    padding: 12px 22px;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+.boton:active {
+    background-color: transparent;
+    outline: 2px solid var(--gris-claro);
+    color: var(--gris-claro);
+}
+footer {
+    margin: 0;
+}
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+.attribution .a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 900px) {
+    .iconos {
+        width: 20%;
+    }
+    .contenedor {
+        flex-direction: column;
+        width: 80vw;
+        margin: 20px 0;
+    }
+    #sedans {
+        border-radius: 7px 7px 0px 0px;
+    }
+    #luxury {
+        border-radius: 0px 0px 7px 7px;
+    }
+    .boton {
+        width: 55%;
+    }
+}
